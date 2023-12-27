@@ -3,10 +3,8 @@
     function tugasC($nama, $wa, $tugas, $pesan)
     {   
         include 'db.php';
-        $query = $conn->query("INSERT INTO tugas (nama,whatsapp,tugas,pesan) VALUES ('$nama','$wa','$tugas','$pesan') ");
-        if (!$query) {
-            return 'GAGAL';
-        }
+        $conn->query("INSERT INTO tugas (nama,whatsapp,tugas,pesan) VALUES ('$nama','$wa','$tugas','$pesan') ");
+        
     }
 
     function tugasU($id,$nama,$wa,$tugas,$pesan)
